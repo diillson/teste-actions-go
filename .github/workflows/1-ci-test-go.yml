@@ -45,7 +45,7 @@ jobs:
 #          signoff: false
           branch: develop
           base: main
-#          delete-branch: false
+          delete-branch: false
 #          title: '[Auto Pull Request] Atualize a Issue com Aprove'
 #          body: |
 #            Comente como Aprovado ou Cancele o PR.
