@@ -5,8 +5,10 @@ name: Go Build deploy
 
 on:
   pull_request:
-    types: closed
+    types: edited
     branches: [ "main" ]
+  issues:
+    types: opened
 
 jobs:
 
