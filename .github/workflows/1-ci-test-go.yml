@@ -43,8 +43,8 @@ jobs:
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
-          branch: main
-          base: develop
+          branch: develop
+          base: main
           delete-branch: false
           title: '[Auto Pull Request] Atualize a Issue com Aprove'
           body: |
