@@ -1,4 +1,4 @@
-name: Gerando Release
+name: Gerando Pre-Release
 
 on:
   pull_request:
