@@ -31,8 +31,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Make changes to pull request
-        run: date +%s > report.txt
+#      - name: Make changes to pull request
+#        run: date +%s > report.txt
 
       - name: Create Pull Request
         id: cpr
@@ -44,6 +44,7 @@ jobs:
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
           branch: develop
+          base: main
           delete-branch: false
           title: '[Auto Pull Request] Atualize a Issue com Aprove'
           body: |
