@@ -26,6 +26,8 @@ jobs:
       run: go test -v main_test.go
 
   Create-Pull-Request-Action:
+    needs:
+      - test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
