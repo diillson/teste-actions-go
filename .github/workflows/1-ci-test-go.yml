@@ -37,14 +37,14 @@ jobs:
       - name: Create Pull Request
 #        id: cpr
         uses: peter-evans/create-pull-request@v4
-#        with:
+        with:
 #          token: ${{ secrets.TOKEN }}
 #          commit-message: Update report
 #          committer: GitHub <noreply@github.com>
 #          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
 #          signoff: false
-#          branch: develop
-#          base: main
+          branch: develop
+          base: main
 #          delete-branch: false
 #          title: '[Auto Pull Request] Atualize a Issue com Aprove'
 #          body: |
