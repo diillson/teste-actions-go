@@ -46,7 +46,7 @@ jobs:
           pr_reviewer: "diillson"                         # Comma-separated list (no spaces)
           pr_assignee: "diillson"                         # Comma-separated list (no spaces)
           pr_label: "auto-pr"                               # Comma-separated list (no spaces)
-          pr_milestone: "Milestone 1"                       # Milestone name
-          pr_draft: true                                    # Creates pull request as draft
-          pr_allow_empty: true                              # Creates pull request even if there are no changes
+          pr_milestone: "JornadaGo"                       # Milestone name
+          pr_draft: false                                    # Creates pull request as draft
+          pr_allow_empty: false                              # Creates pull request even if there are no changes
           github_token: ${{ secrets.TOKEN }}      # If blank, default: secrets.GITHUB_TOKEN
