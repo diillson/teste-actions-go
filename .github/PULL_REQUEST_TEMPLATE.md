@@ -1,6 +1,3 @@
-pr_title=Hello
-pr_title: Hello
+## Verifique o Pull Request ##
 
-## OLAAAAA ##
-
-BEM VINDO , AHAHAHAH CROWWW.
+Caso esteja correto , Edit a issue com seu Aprove para que o CI prossiga.

@@ -1,5 +1,5 @@
 ---
-name: "tagged-release"
+name: "Gerando-release"
 
 on:
   push:
@@ -21,6 +21,7 @@ jobs:
         with:
           repo_token: "${{ secrets.TOKEN }}"
           prerelease: false
+          title: "Release v0.0.1"
           files: |
             LICENSE.txt
             *.zip
