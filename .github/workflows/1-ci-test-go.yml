@@ -27,3 +27,9 @@ jobs:
       
     - name: Test
       run: go test -v main_test.go
+
+    - name: Auto Pull Request
+    - uses: actions/checkout@v3
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v4
