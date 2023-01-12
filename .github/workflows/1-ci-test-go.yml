@@ -25,27 +25,28 @@ jobs:
     - name: Test
       run: go test -v main_test.go
 
-  Create-Pull-Request-Action:
+  pull-request:
     needs:
       - test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: quangvo09/pull-request-action@v1
-        name: Create PR to Main
+      - uses: actions/checkout@v3
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
         with:
-          github_token: ${{ secrets.TOKEN }}
-          branch_prefix: develop
-          base_branch: main
-          labels: develop,main
-          assignees: diillson@hotmail.com
-          reviewers: diillson@hotmail.com
-#      - uses: quangvo09/pull-request-action@v1
-#        name: Create PR to integration
-#        with:
-#          github_token: ${{ secrets.GITHUB_TOKEN }}
-#          branch_prefix: hotfix
-#          base_branch: integration
-#          labels: hotfix,integration
-#          assignees: quangvo09
-#          reviewers: quangvo09
+          source_branch: ""                                 # If blank, default: triggered branch
+          destination_branch: "main"                      # If blank, default: master
+          pr_title: "Pull-Request ${{ github.ref }} Na main" # Title of pull request
+          pr_body: |                                        # Full markdown support, requires pr_title to be set
+            :crown: *An automated PR*
+            - Revise o PR e Edite com uma mensagem de Aprove.
+
+            _Created by [repo-sync/pull-request](https://github.com/repo-sync/pull-request)_
+          pr_template: ".github/PULL_REQUEST_TEMPLATE.md"   # Path to pull request template, requires pr_title to be set, excludes pr_body
+          pr_reviewer: "diillson"                         # Comma-separated list (no spaces)
+          pr_assignee: "diillson"                         # Comma-separated list (no spaces)
+          pr_label: "auto-pr"                               # Comma-separated list (no spaces)
+          pr_milestone: "Milestone 1"                       # Milestone name
+          pr_draft: true                                    # Creates pull request as draft
+          pr_allow_empty: true                              # Creates pull request even if there are no changes
+          github_token: ${{ secrets.TOKEN }}      # If blank, default: secrets.GITHUB_TOKEN
