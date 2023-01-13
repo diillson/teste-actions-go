@@ -32,6 +32,6 @@ jobs:
         with:
           repo_token: "${{ secrets.TOKEN }}"
           prerelease: false
-          title: Release$RELEASE_VERSION
+          title: Release ${{ steps.vars.outputs.tag }}
           files: |
             .github/LICENSE.txt
