@@ -19,7 +19,7 @@ jobs:
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.TOKEN }}"
-          automatic_release_tag: "v0.0.1"
+          automatic_release_tag: "latest"
           prerelease: true
           title: "Development Build"
           files: |
