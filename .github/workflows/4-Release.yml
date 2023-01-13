@@ -4,7 +4,7 @@ name: "Gerando-release"
 on:
   push:
     tags:
-      - "latest"
+      - "v*"
 
 jobs:
   tagged-release:
