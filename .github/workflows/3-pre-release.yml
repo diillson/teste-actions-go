@@ -23,6 +23,6 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: |
-            LICENSE.txt
+            .github/LICENSE.txt
             *.zip
             *.tar.gz
