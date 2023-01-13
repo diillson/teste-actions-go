@@ -16,7 +16,7 @@ jobs:
         run: |
           echo "done!"
 
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - uses: "diillson/auto-release@latest"
         with:
           repo_token: "${{ secrets.TOKEN }}"
           automatic_release_tag: "latest"
